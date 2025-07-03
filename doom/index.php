@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
 </head>
 <body>
+
 <?php
 
 // Configurações do banco de dados
 $host = 'localhost';
 $user = 'root'; // usuário padrão do XAMPP
 $password = ''; // senha padrão do XAMPP (vazia)
-$database = 'login'; // substitua pelo nome do seu banco de dados
+$database = 'doli'; // substitua pelo nome do seu banco de dados
 
 // Conectar ao banco de dados
 $conn = new mysqli($host, $user, $password, $database);
@@ -57,5 +59,25 @@ if (!empty($dados["Sendlogin"])) {
 }
 
 ?>
+
+<!-- Inicio do formulario -->
+<form method="POST" action="">
+
+<div class="campo-input">
+    <label>Usuário: </label>
+    <input type="text" name="usuario" placeholder="digite o usuário" required><br><br>
+</div>
+
+<div class="campo-input">
+    <label>Senha: </label>
+    <input type="password" name="senha_usuario" placeholder="digite a senha" required><br><br>
+</div>
+
+<input type="submit" name="Sendlogin" value="Acessar">
+</form>
+<!-- fim do formulario -->
+
+
+
 </body>
 </html>
